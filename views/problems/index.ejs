@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Problems</title>
+    <link
+      rel="stylesheet"
+      href="../../public/styles/indexStyle.css"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <h1>All problems</h1>
+    <ul>
+      <% for(let problem of problems) { %>
+      <div class="problem">
+        <a href="/problems/<%= problem._id %>"><%= problem.name %> </a>
+      </div>
+      <% } %>
+    </ul>
+  </body>
+</html>
