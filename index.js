@@ -5,8 +5,8 @@ const mongoose = require("mongoose");
 
 const Problem = require("./models/problem");
 
-// app.use(express.static("public")); //for static styles
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static("public")); //for static styles
+// app.use(express.static(path.join(__dirname, "/public")));
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");

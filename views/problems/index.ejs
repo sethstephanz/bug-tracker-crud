@@ -4,20 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Problems</title>
-    <link
-      rel="stylesheet"
-      href="../../public/styles/indexStyle.css"
-      type="text/css"
-    />
+    <style>
+      body {
+        margin: 0;
+      }
+      .High {
+        background-color: red;
+        border: 2px black solid;
+        width: 100%;
+      }
+      .Medium {
+        background-color: yellow;
+        border: 2px black solid;
+        width: 100%;
+      }
+      .Low {
+        background-color: lightblue;
+        border: 2px black solid;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <h1>All problems</h1>
-    <ul>
-      <% for(let problem of problems) { %>
-      <div class="problem">
-        <a href="/problems/<%= problem._id %>"><%= problem.name %> </a>
-      </div>
-      <% } %>
-    </ul>
+    <% for(let problem of problems) { %>
+    <div class="problem <%= problem.severity %>">
+      <a href="/problems/<%= problem._id %>"> <%= problem.name %> </a>Severity:
+      <%= problem.severity %>
+    </div>
+    <% } %>
   </body>
 </html>
