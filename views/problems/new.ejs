@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Problem</title>
+  </head>
+  <body>
+    <h1>New Problem</h1>
+    <form action="/problems" method="POST">
+      <label for="displayID">ID: </label>
+      <input type="number" name="displayID" id="displayID" />
+      <label for="name">Name: </label>
+      <input
+        id="name"
+        type="text"
+        name="name"
+        placeholder="Problem Name"
+      /><br />
+      <label for="severity">Severity: </label>
+      <select name="severity" id="severity">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option></select
+      ><br />
+      <label for="assignedTo">Assigned To: </label>
+      <select name="assignedTo" id="assignedTo">
+        <option value="Anna">Anna</option>
+        <option value="Bob">Bob</option>
+        <option value="Charlie">Charlie</option></select
+      ><br />
+      <label for="startDate">Start Date: </label>
+      <input type="date" name="startDate" id="startDate" />
+      <label for="dueDate">Due Date: </label>
+      <input type="date" name="dueDate" id="dueDate" />
+      <button>Create Problem</button>
+    </form>
+  </body>
+</html>

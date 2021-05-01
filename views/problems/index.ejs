@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All Problems</title>
+    <title>Bug Tracker</title>
     <style>
       body {
         margin: 0;
@@ -26,11 +26,14 @@
     </style>
   </head>
   <body>
-    <h1>All problems</h1>
+    <h1>Bug Tracker</h1>
     <% for(let problem of problems) { %>
     <div class="problem <%= problem.severity %>">
-      <a href="/problems/<%= problem._id %>"> <%= problem.name %> </a>Severity:
-      <%= problem.severity %>
+      <a href="/problems/<%= problem._id %>"> <%= problem.name %> </a><br />
+      Severity: <%= problem.severity %> <br />
+      Assigned To: <%= problem.assignedTo %> <br />
+      Start Date: <%= problem.startDate %> <br />
+      Due Date: <%= problem.dueDate %>
     </div>
     <% } %>
   </body>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Problem</title>
+  </head>
+  <body>
+    <h1>Edit <%= problem.name %></h1>
+    <form action="/problems/<%= problem._id %>?_method=PUT" method="POST">
+      <label for="displayID">ID: </label>
+      <input type="number" name="displayID" id="displayID" required />
+      <label for="name">Name: </label>
+      <input
+        id="name"
+        type="text"
+        name="name"
+        placeholder="Problem Name"
+        value="<%= problem.name %>"
+      /><br />
+      <label for="severity">Severity: </label>
+      <select name="severity" id="severity" required>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option></select
+      ><br />
+      <label for="assignedTo">Assigned To: </label>
+      <select name="assignedTo" id="assignedTo" required>
+        <option value="Anna">Anna</option>
+        <option value="Bob">Bob</option>
+        <option value="Charlie">Charlie</option></select
+      ><br />
+      <label for="startDate">Start Date: </label>
+      <input type="date" name="startDate" id="startDate" required />
+      <label for="dueDate">Due Date: </label>
+      <input type="date" name="dueDate" id="dueDate" required />
+      <button>Edit Problem</button>
+    </form>
+  </body>
+</html>
